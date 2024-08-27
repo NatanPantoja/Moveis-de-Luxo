@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Móveis de Luxo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-secondary">
+    <nav class="navbar bg-warning navbar-expand-sm fixed-top">
+      <div class="container-fluid">
+        <a href="" class="navbar-brand">Móveis de Luxo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-sm-flex justify-content-sm-center d-md-flex justify-content-md-end d-lg-flex justify-content-lg-end" id="menuNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#home" class="nav-link fs-6 fs-sm-6">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link fs-6 fs-sm-6">História</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link fs-6 fs-sm-6">Portfólio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#avaliacao" class="nav-link fs-6 fs-sm-6">Avaliação</a>
+            </li>
+            <li class="nav-item">
+              <a href="#localizacao" class="nav-link fs-6 fs-sm-6">Localização</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+   
+    <!--INICIO DO CAROUSEL-->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/imagem/Principal/principal.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/imagem/Principal/bg_02.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/imagem/Principal/bg_01.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+     <!--FIM DO CAROUSEL-->
+    <!--INICIO DO QUEM SOMOS-->
+    <section class="container-fluid mt-5" id="about">
+      <div class="row d-flex justify-content-around align-items-center">
+        <h1 class="text-center">Quem Somos</h1>
+        <div class="col-md-6 d-flex justify-content-center">
+          <img src="/imagem/Principal/painel.svg" class="img-fluid" alt="painel" />
+        </div>
+        <div class="col-md-6">
+          <p>
+            Na Móveis planejados de Luxo, nossa paixão por design e
+            funcionalidade nos inspira a criar móveis planejados que transformam
+            espaços em ambientes únicos e personalizados. Desde o início de
+            nossa jornada, nos comprometemos a entregar produtos de alta
+            qualidade que combinam beleza, praticidade e durabilidade, atendendo
+            às necessidades e desejos dos nossos clientes. <br /><br />
+            Nosso time é composto por profissionais experientes e talentosos,
+            dedicados a transformar suas ideias em realidade. Cada projeto é
+            tratado com atenção aos detalhes, garantindo que cada peça se
+            encaixe perfeitamente no seu espaço e no seu estilo de vida.
+            Utilizamos materiais de primeira linha e tecnologias de ponta para
+            oferecer soluções inovadoras que otimizam cada centímetro do seu
+            ambiente. <br /><br />
+            Valorizamos a transparência e a satisfação do cliente em todas as
+            etapas do processo. Desde o planejamento inicial até a instalação
+            final, estamos ao seu lado, oferecendo suporte e orientação para que
+            você tenha uma experiência tranquila e satisfatória. Venha nos
+            conhecer e descubra como podemos transformar seu espaço com móveis
+            planejados feitos sob medida para você.
+          </p>
+          <a href="https://wa.me/5511999999999"  target="_blank">
+            <button class="btn bg-dark-subtle tab-link">Faça seu orçamento</button>
+          </a>
+      </div>
+    </section>
+  <!--FIM DO QUEM SOMOS--> 
+  <!--INICIO PORTFÓLIO-->
+    <div class="container-fluid row d-flex justify-content-around align-items-center">
+      <section class="portfolio" id="portfolio">
+        <h1 class="text-center">Portfólio</h1>
+        <div class="text-center">
+          <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'quartos')">Quartos</button>
+          <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'cozinhas')">Cozinhas</button>
+          <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'salas')">Salas</button>
+          <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'banheiros')">Banheiros</button>
+          <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'lojas')">Lojas</button>
+        </div>
+        <div class="projects">
+          <div id="quartos" class="gallery">
+            <img src="/imagem/Quarto/foto_4.jpg" class="img-fluid" alt="Quarto 1" />
+            <img src="/imagem/Quarto/foto_5.jpg" class="img-fluid" alt="Quarto 2" />
+            <img src="/imagem/Quarto/foto_6.jpg" class="img-fluid" alt="Quarto 3" />
+            <img src="/imagem/Quarto/foto_1.webp" class="img-fluid" alt="Quarto 4" />
+            <img src="/imagem/Quarto/foto_2.webp" class="img-fluid" alt="Quarto 5" />
+            <img src="/imagem/Quarto/foto_3.webp" class="img-fluid" alt="Quarto 6" />
+          </div>
+          <div id="cozinhas" class="gallery">
+            <img src="/imagem/Cozinha/foto_1.webp" class="img-fluid" alt="Cozinha 1" />
+            <img src="/imagem/cozinha/foto_2.webp" class="img-fluid" alt="Cozinha 2" />
+            <img src="/imagem/Cozinha/foto_3.webp" class="img-fluid" alt="Cozinha 3" />
+            <img src="/imagem/Cozinha/foto_4.jpg" class="img-fluid" alt="Cozinha 4" />
+            <img src="/imagem/cozinha/foto_5.jpg" class="img-fluid" alt="Cozinha 5" />
+            <img src="/imagem/Cozinha/foto_6.jpg" class="img-fluid" alt="Cozinha 6" />
+          </div>
+          <div id="salas" class="gallery">
+            <img src="/imagem/Sala/foto_1.webp" class="img-fluid" alt="Sala 1" />
+            <img src="/imagem/Sala/foto_2.webp" class="img-fluid" alt="Sala 2" />
+            <img src="/imagem/Sala/foto_3.webp" class="img-fluid" alt="Sala 3" />
+            <img src="/imagem/Sala/foto_4.webp" class="img-fluid" alt="Sala 4" />
+            <img src="/imagem/Sala/foto_5.webp" class="img-fluid" alt="Sala 5" />
+            <img src="/imagem/Sala/foto_6.webp" class="img-fluid" alt="Sala 6" />
+          </div>
+          <div id="banheiros" class="gallery">
+            <img src="/imagem/Banheiro/foto_1.webp" class="img-fluid" alt="Banheiro 1" />
+            <img src="/imagem/Banheiro/foto_2.webp" class="img-fluid" alt="Banheiro 2" />
+            <img src="/imagem/Banheiro/foto_3.webp" class="img-fluid" alt="Banheiro 3" />
+            <img src="/imagem/Banheiro/foto_4.webp" class="img-fluid" alt="Banheiro 4" />
+            <img src="/imagem/Banheiro/foto_5.jpg" class="img-fluid" alt="Banheiro 5" />
+            <img src="/imagem/Banheiro/foto_6.jpg" class="img-fluid" alt="Banheiro 6" />
+          </div>
+          <div id="lojas" class="gallery">
+            <img src="/imagem/Loja/foto_1.jpg" class="img-fluid" alt="Loja 1" />
+            <img src="/imagem/Loja/foto_2.jpg" class="img-fluid" alt="Loja 2" />
+            <img src="/imagem/Loja/foto_3.jpg" class="img-fluid" alt="Loja 3" />
+            <img src="/imagem/Loja/foto_4.jpg" class="img-fluid" alt="Loja 4" />
+            <img src="/imagem/Loja/foto_5.jpg" class="img-fluid" alt="Loja 5" />
+          </div>
+        </div>
+      </section>
+    </div>
+  <!--FIM PORTFÓLIO-->
+  <!--INICIO COMENTÁRIOS-->
+  <section class="container-fluid">
+    <h1 class="text-center mb-4" id="avaliacao">Avaliação</h1>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body rounded">
+                                <h5 class="card-title text-center">João Pedro Silva</h5>
+                                <p class="card-text">“Adorei a experiência! Os móveis planejados se encaixaram perfeitamente no meu espaço e o atendimento foi impecável. Recomendo!”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body rounded">
+                                <h5 class="card-title text-center">Samuel Da Cruz</h5>
+                                <p class="card-text">“Excelente loja! A qualidade dos móveis e o atendimento ao cliente superaram minhas expectativas. Meu apartamento nunca esteve tão organizado!”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body rounded">
+                                <h5 class="card-title text-center">Helena Pantoja</h5>
+                                <p class="card-text">“Fiquei impressionado com a atenção aos detalhes e o design dos móveis. A equipe entendeu exatamente o que eu precisava. Muito satisfeito!”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body rounded">
+                                <h5 class="card-title text-center">Giovana Rodrigues</h5>
+                                <p class="card-text">“Transformaram minha casa com móveis lindos e funcionais. O processo foi tranquilo e o resultado, incrível. Valeu cada centavo!”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body rounded">
+                                <h5 class="card-title text-center">Maria Luiza</h5>
+                                <p class="card-text">“Simplesmente apaixonado pelos móveis que comprei! Atendimento excelente e produtos de alta qualidade. Super recomendo para quem quer um toque especial na casa!”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100">
+                            <div class="card-body rounded">
+                                <h5 class="card-title text-center">Sara Galvão</h5>
+                                <p class="card-text">“Minha experiência foi fantástica! A equipe entendeu minhas necessidades e criou um ambiente maravilhoso. Móveis de ótima qualidade e atendimento nota 10!”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!--FIM COMENTÁRIOS-->
+    <footer class="container-fluid ">
+      <h1 class="text-center" id="localizacao">Localização</h1>
+      <div class="d-flex justify-content-center mb-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.0404350301105!2d-47.99453012645241!3d-16.06339139041103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359870066f609f5%3A0x95d4886c25ae68cd!2sTorres%20Marcenaria!5e0!3m2!1spt-BR!2sbr!4v1723607622080!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+      <div class="container-fluid">
+        <p class="d-flex justify-content-center copy_right text-center strong flex-wrap">
+            Copyright &copy;Todos os Direitos Reservados a ML - Móveis de Luxo Planejados | Desenvolvido por: <span><a href="https://www.linkedin.com/in/natanael-galv%C3%A3o-pantoja-cruz-a998862b2/" target="_blank" class="text-white text-decoration-none cursor-pointer ms-1">
+              Natanael</span>
+            
+            </a>
+        </p>
+    </div>
+    
+
+    </footer>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank">
+      <img src="/imagem/Icons/icons8-whatsapp-60.png" alt="WhatsApp" />
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
