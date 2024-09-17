@@ -41,7 +41,21 @@ body{
   box-shadow: 0 0 10px #0f0c01; 
 }
 
+article{
+  
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
+}
+
+article img{
+  width: 30%;
+  height:300px;
+  object-fit: cover;
+  margin: 10px;
+  
+}
 .gallery {
   display: none;
   padding: 20px;
@@ -92,6 +106,10 @@ body{
 
 
 @media (max-width: 605px) {
+  article img{
+    width: 90%;
+  }
+  
   .gallery img {
     width: 100%; 
   }
