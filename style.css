@@ -9,6 +9,11 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 
+.navbar img {
+  width: 32px;
+  height: 32px;
+}
+
 .navbar:hover {
   background-color: #e5b834;
 }
@@ -19,7 +24,7 @@ body {
   transition: color 0.3s ease;
   display: inline-block;
   padding-bottom: 5px;
-  font-size: 16px;
+
 }
 
 .nav-link:hover {
