@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Para a animação acontecer apenas uma vez
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -38,43 +38,71 @@ document.addEventListener('DOMContentLoaded', function () {
         element.classList.add('fade-in');
         observer.observe(element);
     });
-});
 
-document.querySelectorAll('.tab-link').forEach(button => {
-    button.addEventListener('click', function (e) {
-        console.log('Botão clicado:', this.textContent);
-        let ripple = document.createElement('span');
-        ripple.classList.add('ripple');
-        this.appendChild(ripple);
+    // Configurar os botões da galeria
+    document.querySelectorAll('.tab-link').forEach(button => {
+        button.addEventListener('click', function (e) {
+            // Efeito visual do botão
+            let ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            this.appendChild(ripple);
 
-        let rect = this.getBoundingClientRect();
-        let size = Math.max(rect.width, rect.height);
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
-        ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
+            let rect = this.getBoundingClientRect();
+            let size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
+            ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
 
-        setTimeout(() => {
-            ripple.remove();
-        }, 600);
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+
+            // Lógica da galeria
+            const galleryId = this.getAttribute('data-gallery');
+            const articleImages = document.querySelector('article');
+
+            if (this.classList.contains('active')) {
+                // Se o botão já estiver ativo, desativa ele
+                this.classList.remove('active');
+                document.getElementById(galleryId).style.display = "none";
+                articleImages.style.display = "flex"; // Mostra as imagens do article
+            } else {
+                // Remove active de todos os botões
+                document.querySelectorAll('.tab-link').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Esconde todas as galerias
+                document.querySelectorAll('.gallery').forEach(gallery => {
+                    gallery.style.display = "none";
+                    gallery.classList.remove("active");
+                });
+
+                // Ativa o botão clicado e mostra sua galeria
+                this.classList.add('active');
+                document.getElementById(galleryId).style.display = "flex";
+                document.getElementById(galleryId).classList.add("active");
+                articleImages.style.display = "none"; // Esconde as imagens do article
+            }
+        });
     });
 });
 
-function showGallery(event, galleryName) {
-    var i, tabcontent, tablinks;
+// Adicionar função para mostrar as imagens do article quando nenhuma galeria estiver ativa
+function hideGalleryShowArticle() {
+    var galleries = document.getElementsByClassName("gallery");
+    var articleImages = document.querySelector('article');
+    var anyGalleryVisible = false;
 
-    tabcontent = document.getElementsByClassName("gallery");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-        tabcontent[i].classList.remove("active");
+    for (var i = 0; i < galleries.length; i++) {
+        if (galleries[i].style.display === "flex") {
+            anyGalleryVisible = true;
+            break;
+        }
     }
 
-    tablinks = document.getElementsByClassName("tab-link");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
+    if (!anyGalleryVisible) {
+        articleImages.style.display = "flex";
     }
-
-    document.getElementById(galleryName).style.display = "flex";
-    document.getElementById(galleryName).classList.add("active");
-    event.currentTarget.classList.add("active");
 }
 

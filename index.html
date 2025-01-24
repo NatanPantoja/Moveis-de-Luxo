@@ -122,23 +122,20 @@
   </section>
   <!--FIM DO QUEM SOMOS-->
   <!--INICIO PORTFÓLIO-->
-  <div class="container-fluid row d-flex justify-content-around align-items-center">
+  <main class="container-fluid row d-flex justify-content-around align-items-center">
     <section class="portfolio" id="portfolio">
       <h1 class="text-center">Portfólio</h1>
-      <article>
-        <img src="/imagem/Portfólio/painel.svg" class="img-fluid rounded" alt="painel">
-        <img src="/imagem/Portfólio/cozinha.svg" class="img-fluid rounded" alt="cozinha">
-        <img src="/imagem/Portfólio/banheiro.svg" class="img-fluid rounded" alt="Banheiro">
-      </article><br>
-      <p class="text-center">Conheça um pouco mais do nosso trabalho entrando nas opções a baixo</p>
 
+      <!--BOTÕES -->
       <div class="text-center">
-        <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'quartos')">Quartos</button>
-        <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'cozinhas')">Cozinhas</button>
-        <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'salas')">Salas</button>
-        <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'banheiros')">Banheiros</button>
-        <button class="btn bg-dark-subtle tab-link" onclick="showGallery(event, 'lojas')">Lojas</button>
+        <button class="btn bg-dark-subtle tab-link" data-gallery="quartos">Quartos</button>
+        <button class="btn bg-dark-subtle tab-link" data-gallery="cozinhas">Cozinhas</button>
+        <button class="btn bg-dark-subtle tab-link" data-gallery="salas">Salas</button>
+        <button class="btn bg-dark-subtle tab-link" data-gallery="banheiros">Banheiros</button>
+        <button class="btn bg-dark-subtle tab-link" data-gallery="lojas">Lojas</button>
       </div>
+
+      <!--AS IMAGENS AO CLICK OS BOTÕES-->
       <div class="projects">
         <div id="quartos" class="gallery">
           <img src="/imagem/Quarto/foto_4.jpg" class="img-fluid" alt="Quarto 1" />
@@ -180,8 +177,15 @@
           <img src="/imagem/Loja/foto_5.jpg" class="img-fluid" alt="Loja 5" />
         </div>
       </div>
+
+      <!--IMAGEM QUE APARECE PERMANETE NO SITE-->
+      <article>
+        <img src="/imagem/Portfólio/painel.svg" class="img-fluid rounded" alt="painel">
+        <img src="/imagem/Portfólio/cozinha.svg" class="img-fluid rounded" alt="cozinha">
+        <img src="/imagem/Portfólio/banheiro.svg" class="img-fluid rounded" alt="Banheiro">
+      </article><br>
     </section>
-  </div>
+  </main>
   <!--FIM PORTFÓLIO-->
   <!--INICIO COMENTÁRIOS-->
   <section class="container-fluid">
