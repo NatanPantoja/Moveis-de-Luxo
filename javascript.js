@@ -106,6 +106,7 @@ function hideGalleryShowArticle() {
     }
 }
 
+// E função é usada quando o carousel é visto pelo celular.
 document.addEventListener('DOMContentLoaded', function () {
     var carouselElement = document.getElementById('carouselExampleIndicators');
     var carousel = new bootstrap.Carousel(carouselElement);
