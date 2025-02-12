@@ -106,3 +106,17 @@ function hideGalleryShowArticle() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    var carouselElement = document.getElementById('carouselExampleIndicators');
+    var carousel = new bootstrap.Carousel(carouselElement);
+    var hammer = new Hammer(carouselElement);
+
+    hammer.on('swipeleft', function () {
+        carousel.next();
+    });
+
+    hammer.on('swiperight', function () {
+        carousel.prev();
+    });
+});
+
